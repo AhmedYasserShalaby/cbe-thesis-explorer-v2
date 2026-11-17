@@ -1,0 +1,9 @@
+{
+  "central_bank_of_egypt_2005_05-10-2005": {
+    "displayAction": "hold",
+    "displayBps": "0",
+    "note": "Source-reviewed correction: the deposit rate was held at 9%; the lending rate was cut by 50 bps. The frozen inventory labels the lending cut as the policy action. This excluded record is displayed as a deposit hold, consistent with the review workbook. Frozen CSVs and forecasts are unchanged.",
+    "evidence_file": "04_data/verification/policy_rate_levels_2026-10-27/excluded_2005_action_issue.json",
+    "evidence_sha256": "0857c0eadf4e4230e1249c47b3c6d009fcecfc89bc07f8603e993084bad90493"
+  }
+}

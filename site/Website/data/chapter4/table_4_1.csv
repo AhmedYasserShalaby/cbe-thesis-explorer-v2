@@ -1,0 +1,10 @@
+Population or exclusion,Count,Meaning
+All original documents,176,Document inventory
+Policy-statement candidates,174,173 English and 1 Arabic only
+English policy candidates,173,Language-eligible inventory
+Arabic-only policy candidate,1,Excluded from English model
+Administrative notices,2,Excluded from policy model
+English candidates before sector history,16,Excluded before January 2007
+English candidates in shared 2011 reopening window,2,Excluded by event-window rules
+Common eligible English policy events,155,99 legacy and 56 modern-live
+First-session sector outcomes,310,155 Banks and 155 Real Estate

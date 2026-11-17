@@ -1,0 +1,1042 @@
+{
+  "artifact": "CBE Thesis Explorer",
+  "prepared": "2026-11-04",
+  "study_snapshot": "first_session_only_2026-10-28/run_001",
+  "scope": "Local reader of accepted saved outputs. No fits, new forecasts or interval generation.",
+  "units": {
+    "actual_pp": "return in percent",
+    "prediction_pp": "return in percent",
+    "MAE_pp": "percentage points",
+    "RMSE_pp": "percentage points",
+    "bps": "basis points"
+  },
+  "selection": "Display columns are copied from the accepted CSVs; all accepted prediction, score and paired-comparison rows are retained.",
+  "display_transforms": [
+    "Human-readable dates, labels and rounding",
+    "Exact word comparison of retained extracted texts",
+    "Per-event forecast-minus-actual and absolute miss",
+    "Source-reviewed 2005-10-05 display correction; frozen inventory retained unchanged"
+  ],
+  "known_review_notes": "data/review_notes.json",
+  "limits": [
+    "Retrospective, exploratory analysis; original publication clocks and historical text vintages unverified.",
+    "Overlapping samples, small dependent announcement sets, sector index definition change in 2020.",
+    "Descriptive 95% circular five-announcement block-bootstrap intervals; 2,000 replications, not multiplicity-adjusted.",
+    "Inventory coverage is not a certified complete CBE archive; no complete new human semantic audit.",
+    "Bundled Refinitiv-derived returns remain local; this artifact establishes no redistribution permission."
+  ],
+  "source_files": [
+    {
+      "source": "04_data/processed/first_session_only_2026-10-28/original_text_inventory.csv",
+      "bundled": "data/original_text_inventory.csv",
+      "sha256": "2b8c720388214ce38635b0920cb3d4ecaa2674689077dc752157f1fc06d9d200"
+    },
+    {
+      "source": "04_data/processed/first_session_only_2026-10-28/common_event_cohort.csv",
+      "bundled": "data/common_event_cohort.csv",
+      "sha256": "23756e369bbd2e367e68300a0a8cc2bbb522ec48df4b996a2b4b739f93d40d69"
+    },
+    {
+      "source": "04_data/processed/first_session_only_2026-10-28/event_exclusions.csv",
+      "bundled": "data/event_exclusions.csv",
+      "sha256": "059343725ac36d9e1f1f64f1ac3992e083aed7fa9c104e6e33983f106ada0aca"
+    },
+    {
+      "source": "04_data/processed/first_session_only_2026-10-28/DATASET_CARD.md",
+      "bundled": "data/DATASET_CARD.md",
+      "sha256": "01ca2797bdc48a1a29b1dddd3aec0f65d79bbd364a51df6f4f09ac6e2b94f8db"
+    },
+    {
+      "source": "04_data/processed/first_session_only_2026-10-28/DATA_DICTIONARY.md",
+      "bundled": "data/DATA_DICTIONARY.md",
+      "sha256": "4028d6ff8bc34785220dcf2df4b31994a2756c758a0fff27c9ce46c835d46332"
+    },
+    {
+      "source": "06_results/first_session_only_2026-10-28/run_001/metrics.csv",
+      "bundled": "data/metrics.csv",
+      "sha256": "5a46ae72abe517068a43f972ad4f90fb58e3fb2804b413bbcbbf98050840c51d"
+    },
+    {
+      "source": "06_results/first_session_only_2026-10-28/run_001/predictions.csv",
+      "bundled": "data/predictions.csv",
+      "sha256": "f7089e3fc087ad5a871fe29f485aec11abc5db31e9cb220f4c0a504f98012404"
+    },
+    {
+      "source": "06_results/first_session_only_2026-10-28/run_001/paired_text_differences.csv",
+      "bundled": "data/paired_text_differences.csv",
+      "sha256": "b0bcfa07ea9af1d28af71ee19b6adf92e825d667348f11808eb49bc3560d861e"
+    },
+    {
+      "source": "04_data/processed/first_session_only_2026-10-28/daily_prices.csv",
+      "bundled": "data/daily_prices.csv",
+      "sha256": "372edb4724524d8b07a2f1d211b79569c034d83ae8b7f7ad5392c8e6a5508046"
+    },
+    {
+      "source": "04_data/processed/first_session_only_2026-10-28/event_sector_modeling.csv",
+      "bundled": "data/event_sector_modeling.csv",
+      "sha256": "6df214741a9e3e7bf7f1029563439e9b7de53c9c5d2b4af630389b9b4a5f0ba0"
+    },
+    {
+      "source": "04_data/processed/policy_rate_levels_2026-10-27/policy_rate_provenance_v2.csv",
+      "bundled": "data/policy_rate_provenance_v2.csv",
+      "sha256": "a6df5987bad32c0c4a1da3f8c37ecb515a3fb4332f6b86511d826ee216beec69"
+    }
+  ],
+  "original_pdfs": [
+    {
+      "doc_id": "central_bank_of_egypt_2005_02-06-2005",
+      "path": "documents/000.pdf",
+      "sha256": "209f3b23efa0ff823814c3b0cc011bd3cff3026a6ad30fcd5dbcfe7ac102d170"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2005_07-07-2005",
+      "path": "documents/001.pdf",
+      "sha256": "dde8ae5ba4fad67832de51e0c7bba91325b0b916b81cf2bee12e250e103f68c6"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2005_04-08-2005",
+      "path": "documents/002.pdf",
+      "sha256": "515dc0741035ede9c20eae94ef67443928ad5557fd401e3a7d794cab0d1a0e43"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2005_01-09-2005",
+      "path": "documents/003.pdf",
+      "sha256": "be441b32b415349a83f71bea1cc10ccc0013f99c62c01c3adb1dfcb418efe536"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2005_05-10-2005",
+      "path": "documents/004.pdf",
+      "sha256": "b7c6fc04513ab0603cc328622f08f54b03d0cfa979a1e99b17bd5774f1ccb74c"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2005_10-11-2005",
+      "path": "documents/005.pdf",
+      "sha256": "c49817d756aeb58210fa384f51df65c01f2a44af9e19219661032d51c6a68864"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2005_01-12-2005",
+      "path": "documents/006.pdf",
+      "sha256": "6495a873f8e60f2310f8ef62aebd3105afcb247998e228659139706f7eacb05b"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2006_19-01-2006",
+      "path": "documents/007.pdf",
+      "sha256": "be173fa8604900467aa890ec26b1c14f46bb37fe897b32420665fbc3e9146199"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2006_16-02-2006",
+      "path": "documents/008.pdf",
+      "sha256": "4c110f54279725a6532d7d9d2addee5857b58f91bb34b931142f1c1205f5b1b1"
+    },
+    {
+      "doc_id": "cbe_original_2006-04-06",
+      "path": "documents/009.pdf",
+      "sha256": "1ca6a5e6cb893b3b38a2af5eb2a990455788e69bac8ae44dbc081cc5655a0021"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2006_18-05-2006",
+      "path": "documents/010.pdf",
+      "sha256": "c7864ceeda9b358b14b34040b522e8ca8e18bce6d4291b48a09d64371adb26a5"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2006_29-06-2006",
+      "path": "documents/011.pdf",
+      "sha256": "668e5c5c777aef9dc76f3552fb2740e7cb4f3bc4256f7b218020df182e47ef7e"
+    },
+    {
+      "doc_id": "cbe_original_2006-08-10",
+      "path": "documents/012.pdf",
+      "sha256": "0e90b7bf1f863ebebfae4c877ffb49b2af1d19a81d056aafde1741748651be96"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2006_16-08-2006",
+      "path": "documents/013.pdf",
+      "sha256": "7d418eeeb1fc330eaaaa8cee9c372d6607df73360c9c0306c8d7d7fe7aa15c59"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2006_05-10-2006",
+      "path": "documents/014.pdf",
+      "sha256": "b5e2f873d25cfb14c717aff277cc015ad845417b8ef2dd3fb71351b2eb8315ce"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2006_02-11-2006",
+      "path": "documents/015.pdf",
+      "sha256": "878e768a47abc326278c3241b6be6205d666aaecdfa0b6e626c7bdd679580fe6"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2006_25-12-2006",
+      "path": "documents/016.pdf",
+      "sha256": "ac35e75c5c8c75566d2750585da5b401c1f852196e678495848e170bd52a85ac"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2007_01-02-2007",
+      "path": "documents/017.pdf",
+      "sha256": "5fe11b5a926e7c7519e6fdff54fe43a28e05c64fec3ade242819e44da416adfa"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2007_22-03-2007",
+      "path": "documents/018.pdf",
+      "sha256": "3b55c295847079559506c4770e79458141e284b30b534821b3765fa91289d8f5"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2007_10-05-2007",
+      "path": "documents/019.pdf",
+      "sha256": "6c6b5ef43f78da99d16449e6d592bdb684149629a508d9610c04d98fb6243957"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2007_05-07-2007",
+      "path": "documents/020.pdf",
+      "sha256": "5ca4db70208cf21e00299dc9ad6285fa8eee3f1294f6e220fa31716a172b1c70"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2007_16-08-2007",
+      "path": "documents/021.pdf",
+      "sha256": "6290bfabf314b411204f5555cda6a29dd1a770d8eb9f3c6767ec0a823c1a8a57"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2007_20-09-2007",
+      "path": "documents/022.pdf",
+      "sha256": "9850717d063c0358a3242e822daf7208656e34af0e61c3a5de070e79748833c8"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2007_01-11-2007",
+      "path": "documents/023.pdf",
+      "sha256": "b2ccc8ee9d7845fa9965909ae95c9495bd616b641156c184e2341c8c5cecce69"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2007_13-12-2007",
+      "path": "documents/024.pdf",
+      "sha256": "7f2ec9344452b80d244bb105007db54a162e7b2723cead8e41fb50e0f52dafa1"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2008_07-02-2008",
+      "path": "documents/025.pdf",
+      "sha256": "a354b5dde6aac37c09377731946ff0739667e14f2dc8d2fbb0d28d263b516a49"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2008_23-03-2008",
+      "path": "documents/026.pdf",
+      "sha256": "c70b6af3ad1a915577ef81e6bc4618a2bca99cf3ad804d41c9825ebfb83ddc7b"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2008_08-05-2008",
+      "path": "documents/027.pdf",
+      "sha256": "72b15110e9ecffb451adaa329b0656a37a66eaf882e4c1580074a4c81a553a31"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2008_26-06-2008",
+      "path": "documents/028.pdf",
+      "sha256": "714623414f18c39f93f7b4414e69bf66466d806054a300f3a5e5c09e63358aed"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2008_07-08-2008",
+      "path": "documents/029.pdf",
+      "sha256": "e7f9554b15f3f28ca2bdf8e606a46c004b8905e7bbcbc9466cea824cf383daa1"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2008_18-09-2008",
+      "path": "documents/030.pdf",
+      "sha256": "4d85ae84ece164c32d6681d4f7f9cbb8eb4b4e3b2e84257be2f37dfd6a48ca81"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2008_06-11-2008",
+      "path": "documents/031.pdf",
+      "sha256": "df24c677a15fc8aa15a852a7f949da1c7bd411f476ba16ba5d9c0c5e828ea429"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2008_25-12-2008",
+      "path": "documents/032.pdf",
+      "sha256": "42dc0e0d4dc6dcd98e524ab8777651e764904ba7ea26b773c37352f45404ac03"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2009_12-02-2009",
+      "path": "documents/033.pdf",
+      "sha256": "2e4b08e639cb3be92ae5096b3e3c11b520a9cd671f9355f340c9e80aeea0ea71"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2009_26-03-2009",
+      "path": "documents/034.pdf",
+      "sha256": "4285c969b8ce772ab4efff87127cc4994c3974a8c5823f457b0f64a5aa75c82d"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2009_14-05-2009",
+      "path": "documents/035.pdf",
+      "sha256": "02d9c6363940082000e14e637135764ab573c60e0658b5f0b328e5aa37f0aa32"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2009_18-06-2009",
+      "path": "documents/036.pdf",
+      "sha256": "325313a2e2ab2eb4357f37263e7a90ff39af54e4054941390b44a8ab86aebbbd"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2009_30-07-2009",
+      "path": "documents/037.pdf",
+      "sha256": "d0d983d939ab6c72fad59d8970aacd050f0a7414ab862fdc72dd495c909adc40"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2009_17-09-2009",
+      "path": "documents/038.pdf",
+      "sha256": "963be6cd1670a35dd69851d3f0ed51bf2bc4cbf3ea568857fd63c5e76b0cf54a"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2009_05-11-2009",
+      "path": "documents/039.pdf",
+      "sha256": "78d087897172c02f3609194720516b5152c9bca31b71938f9856f6d7ecaf9416"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2009_24-12-2009",
+      "path": "documents/040.pdf",
+      "sha256": "cda00f38495d750d6f139999315406e51e17893f5476345d20cb55eb78723363"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2010_04-02-2010",
+      "path": "documents/041.pdf",
+      "sha256": "c1e1fcc1b837bc07df52995382dc1f6dd7752be0d64d1862668371f7cf61fd4d"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2010_18-03-2010",
+      "path": "documents/042.pdf",
+      "sha256": "7ae49c2c4c6193938d1324e378adc334bdf0ae393962e1fc72d90a05b57386a9"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2010_06-05-2010",
+      "path": "documents/043.pdf",
+      "sha256": "00cd9f429ebec0dc2e8d1c9f3f88679146248a8f51509ab4ca0608c3dd86c239"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2010_17-06-2010",
+      "path": "documents/044.pdf",
+      "sha256": "a38fc1da189c180c6522827dc0da66f0543b061afeb99f146794c1cbd39642ff"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2010_29-07-2010",
+      "path": "documents/045.pdf",
+      "sha256": "4c11deed78ec88965eec5a1d1f300ffaabde450907274d9e70f3fcc004c35272"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2010_16-09-2010",
+      "path": "documents/046.pdf",
+      "sha256": "8c6c431d5ab4bca09b284b54080db85323902e70cb378554ecd33b4ffcd75fbe"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2010_04-11-2010",
+      "path": "documents/047.pdf",
+      "sha256": "c3569d45499bcd1e681d40b6ae7cbfd5f52b0026ff42a7ea812f127ea5074606"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2010_16-12-2010",
+      "path": "documents/048.pdf",
+      "sha256": "e60f37e8ff2a8fa0d703f64e452dc41eac27de013013b8d1f46530c536a2ee66"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2011_27-01-2011",
+      "path": "documents/049.pdf",
+      "sha256": "fda05d6423216ca661372709fcd96184456fc78cc69f5248fbc1a2e91055b593"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2011_10-03-2011",
+      "path": "documents/050.pdf",
+      "sha256": "d0047229432e48960d793232d1ab037d5c7dee481f23b57f63b9f85f46f392b4"
+    },
+    {
+      "doc_id": "cbe_original_2011-04-28",
+      "path": "documents/051.pdf",
+      "sha256": "97cf52a1dd7de3a763277a520b4d8114ea6a2573e9ef70e3458e2b0807274a63"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2011_09-06-2011",
+      "path": "documents/052.pdf",
+      "sha256": "6c1697484b27652bcdcc6aa0cd4bd7cd11ecce4b1364d19085caad5963456c3e"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2011_21-07-2011",
+      "path": "documents/053.pdf",
+      "sha256": "76042f752d5644741e6c70c7e8d706768b3ff4b3cdd9f3890e3ef6b21fbd16b0"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2011_25-08-2011",
+      "path": "documents/054.pdf",
+      "sha256": "fc73be73eedb3116f26dac1e7b4efc634c6269587638c53196ae5649e6b3c14e"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2011_24-11-2011",
+      "path": "documents/055.pdf",
+      "sha256": "3c1fabc3f0ac99cdf2c1ce8418c33957b041996fc4a0c46a8f34824d1385c8c1"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2012_02-02-2012",
+      "path": "documents/056.pdf",
+      "sha256": "3f5b7408da676e46a69d7fee5240cc8eb299894749e5ce3c747cb3d7233037a1"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2012_22-03-2012",
+      "path": "documents/057.pdf",
+      "sha256": "3b8d9c2e8ceb8d633b77f03ebcc5ac04a22b3b91c5d1f88e14fbe896b927fff2"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2012_03-05-2012",
+      "path": "documents/058.pdf",
+      "sha256": "ecddd2608e9a247fd98945aecd3b08e0437b2557151218972543552d03cbc1d9"
+    },
+    {
+      "doc_id": "cbe_original_2012-06-14",
+      "path": "documents/059.pdf",
+      "sha256": "5ded8be310e23423cd89a42ffacfbb38c1644ff90de450b4d59b9fdafae742e9"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2012_26-07-2012",
+      "path": "documents/060.pdf",
+      "sha256": "a4a370444a66ed364873cab5fac5da2aab6f21bd5267c21ffa51172819d88bcb"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2012_06-09-2012",
+      "path": "documents/061.pdf",
+      "sha256": "6995937eeb447214b10084e38c3f8dbc431dad9d9f1a3c0ec0bd1521b7a9cf5c"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2012_18-10-2012",
+      "path": "documents/062.pdf",
+      "sha256": "bcc9fa050b9e6e75fc4b2ed77e48b8a267ac489dd684317a1918e34f81949913"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2012_06-12-2012",
+      "path": "documents/063.pdf",
+      "sha256": "ced93d1070b5af674f29956a4aaf92fcd885e4b251cfbb176e3fd03c803a7fff"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2013_31-01-2013",
+      "path": "documents/064.pdf",
+      "sha256": "a7f22fde01f8e7c10cdf9a829a325c31e9b2ac18424b0535e8c7c5b8b9a02b1f"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2013_21-03-2013",
+      "path": "documents/065.pdf",
+      "sha256": "72a4e976cb48c0d4faed0309de951cd96df791d031cd64711a83b800d03059fe"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2013_09-05-2013",
+      "path": "documents/066.pdf",
+      "sha256": "8c59727bfaf5b06a50f1a505d0b0166f3e32fc16f3cc71cfd0977b7e43cbc69f"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2013_20-06-2013",
+      "path": "documents/067.pdf",
+      "sha256": "26a7006b1ae28d70a742326e3ddeb103d8d61531ca299ca962bf110dfcba2522"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2013_01-08-2013",
+      "path": "documents/068.pdf",
+      "sha256": "c3ac0a5cd76e2759c62f111ee9f2b9b8e02e28fd540ac1ac995b04b8964266a3"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2013_19-09-2013",
+      "path": "documents/069.pdf",
+      "sha256": "02074d1ec43848508185350da0d195b3dc8a231f35d7dff6d5d4dd0891eea023"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2013_31-10-2013",
+      "path": "documents/070.pdf",
+      "sha256": "e7ae9510c22b8298188cf4202205915ad1e9d7c9e16fb822a55c12f63170ac95"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2013_05-12-2013",
+      "path": "documents/071.pdf",
+      "sha256": "d683bc32286d3f0abfe9f2d4617995a01b64112ef05351eee4ba98fb3c62ff9c"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2014_16-01-2014",
+      "path": "documents/072.pdf",
+      "sha256": "475f902029985427e2088cdde4abd823dad25c04dd18c2b5e96498d601a328ba"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2014_27-02-2014",
+      "path": "documents/073.pdf",
+      "sha256": "8309b6e3f313ce1e43b7b8c702d5c2c1dad74421dc7804ab80e8282a7c0791a0"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2014_20-04-2014",
+      "path": "documents/074.pdf",
+      "sha256": "01ebce147f00e9c43e09bbc36aff61340d26b9df43e1ab51256790b398b532fb"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2014_29-05-2014",
+      "path": "documents/075.pdf",
+      "sha256": "c8f25004d035ab091210d0a5f34affae75606d91f4eca65b1801be2f7445be00"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2014_17-07-2014",
+      "path": "documents/076.pdf",
+      "sha256": "50fb33608be898faec2c5b151f8875b80c800112b6aeac5d17398ad25f355141"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2014_01-09-2014",
+      "path": "documents/077.pdf",
+      "sha256": "6bb4c136de01fff93f2780744313ce6b253cc68ef66e856efe720b76f55de9af"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2014_16-10-2014",
+      "path": "documents/078.pdf",
+      "sha256": "fa078e2c5891d101cee598120ea52e4775c8395354ddef2fd876fc70cf909b94"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2014_27-11-2014",
+      "path": "documents/079.pdf",
+      "sha256": "4af6b031601a99471e387ac6ed0042e1ca03ebe59080494fc2ffa730ad743f59"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2015_15-01-2015",
+      "path": "documents/080.pdf",
+      "sha256": "34785aaeac785ff819949efbb475c1379901f7c8ccd4918c19c384d2ebd4219e"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2015_26-02-2015",
+      "path": "documents/081.pdf",
+      "sha256": "3b9fe6a77e356b66e03e63679ca8e1d5f84642c1478e6cc26a406423a9d6e617"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2015_23-04-2015",
+      "path": "documents/082.pdf",
+      "sha256": "f5fb0d7f3a2b98080774864ace21310488d88fcfda01479ab788361e90d53937"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2015_11-06-2015",
+      "path": "documents/083.pdf",
+      "sha256": "06c4a912758c2071a7554dc1db82294d64b7dafc0781693f5bc6da48856cf483"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2015_30-07-2015",
+      "path": "documents/084.pdf",
+      "sha256": "db02d66e483595b7de4672da62fa7820616b5ce5473d0bd88a7c988f87461a31"
+    },
+    {
+      "doc_id": "cbe_original_2015-09-17",
+      "path": "documents/085.pdf",
+      "sha256": "9ef0559cac4fe02e2b75edcfabaf6a1aed36891eba8128f1431b3f4eea39f104"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2015_29-10-2015",
+      "path": "documents/086.pdf",
+      "sha256": "a4d177249b4dbb3785264ff6bc42b91de2638fcfda777c3a91dd11081ef8a727"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2015_17-12-2015",
+      "path": "documents/087.pdf",
+      "sha256": "a550fabc1e779a75f2929bb3c379a72e7a034ba95e78e55c26f93f3e3ed10f6e"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2015_24-12-2015",
+      "path": "documents/088.pdf",
+      "sha256": "48a8107bfd537b8a9e9df7051acf37455f7653b545ac5ebfca8518e9df00b11a"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2016_28-01-2016",
+      "path": "documents/089.pdf",
+      "sha256": "63a7420e62c5bcdb48b4035dd7d20a9ea8419af45a5453dec3313d7c77fe1fa8"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2016_17-03-2016",
+      "path": "documents/090.pdf",
+      "sha256": "3f59c4e53e3705dff0c01d0d5e14bf1025ceb9e801dc9e2e80a08465ee1e33b2"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2016_28-04-2016",
+      "path": "documents/091.pdf",
+      "sha256": "b96f2465aa9f2f6cee8b1cc2b13b1277d0eb33de51d4b0df3df3f856ae88e2e9"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2016_16-06-2016",
+      "path": "documents/092.pdf",
+      "sha256": "15ea3f8f53c6802b18c55486827e6bb6652fde8e1779484a933739bf1e76ab66"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2016_28-07-2016",
+      "path": "documents/093.pdf",
+      "sha256": "a2e2e83de216616e082c769331aeba4a253ae8d6ba814dc2c7006fc835a69f2a"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2016_22-09-2016",
+      "path": "documents/094.pdf",
+      "sha256": "798354709da185b8829cf89a2b989a06e9308a75a4f29a2af96f5c90c9fa0e82"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2016_17-11-2016",
+      "path": "documents/095.pdf",
+      "sha256": "1f62384c2ba131ce42e7e6de7f91014b8a7d516ee4f7b9a4d6a2b5d42a23c957"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2016_29-12-2016",
+      "path": "documents/096.pdf",
+      "sha256": "ff954187f268b8678aede97dfcce7f8343758198d97b87873895a41911c9762c"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2017_16-02-2017",
+      "path": "documents/097.pdf",
+      "sha256": "a8e466858791cd20dc580a98c01883c0810af5dd8c4f83ea552b317e8beff0f9"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2017_30-03-2017",
+      "path": "documents/098.pdf",
+      "sha256": "1f7e038dd5565c19808e45719e2d34d7aed20ac04bfe1c24716ece8640f42e31"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2017_21-05-2017",
+      "path": "documents/099.pdf",
+      "sha256": "abce331cdd598e0789b96456e0aa7e33e9e002e6999fe4124f29cf6ff1b84305"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2017_06-07-2017",
+      "path": "documents/100.pdf",
+      "sha256": "745ef59a3b2796fd56d4aafbad155734f8d8f33c6076491e2711349b7c6a88c1"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2017_17-08-2017",
+      "path": "documents/101.pdf",
+      "sha256": "5cfc2d5661fbcae8314a4e8f7fca3d51737737dbdadc52e42ad4bf368a0149c2"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2017_28-09-2017",
+      "path": "documents/102.pdf",
+      "sha256": "13635eb46af2477a4f2a0cb48a8f67b0889ea0304fb3323ea24754155e8ff575"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2017_16-11-2017",
+      "path": "documents/103.pdf",
+      "sha256": "401f095a330806fb6832310239cc740d98cd7fbd87894f1cb8f6d7aa6260bb9c"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2017_28-12-2017",
+      "path": "documents/104.pdf",
+      "sha256": "f0420b82fc7d75dd79195c3460e047436d98cc0cc4abb60aca1735c1cc0b3a3b"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2018_15-02-2018",
+      "path": "documents/105.pdf",
+      "sha256": "1050b3e84e698776486cce22ffaa2ad3828f3bcaabd19627790ee56a0d996213"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2018_29-03-2018",
+      "path": "documents/106.pdf",
+      "sha256": "772f6bc682451a737f17e94b5276aeaf89254795087bcf699f9b9e93b05ec17b"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2018_17-05-2018",
+      "path": "documents/107.pdf",
+      "sha256": "cc004e78854416b3e0412e238cf4b00a235e7dcb6481bc51edf14587f46d8758"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2018_28-06-2018",
+      "path": "documents/108.pdf",
+      "sha256": "144935efef0fff2f08fb25ec9705646e31e9d791afcf4aacc07d1b5ea605a878"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2018_16-08-2018",
+      "path": "documents/109.pdf",
+      "sha256": "ca2f8f78760f5ffa68fa7c3b54da9113b2f5dfc5e9bce2e0f321be68ec72beca"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2018_27-09-2018",
+      "path": "documents/110.pdf",
+      "sha256": "40f823e43ba820a48c55dc75b005dceeceec14828ca469ea6ccaba7475c12f59"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2018_15-11-2018",
+      "path": "documents/111.pdf",
+      "sha256": "8c29c3599d437e304cdabb292394c8ecddfc58a081a3d3e0027af5d03cb236f1"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2018_27-12-2018",
+      "path": "documents/112.pdf",
+      "sha256": "45c42e0032344c3abfc385e655c1806e73133337cf19ccf1d5faf2c5d44d43e1"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2019_14-02-2019",
+      "path": "documents/113.pdf",
+      "sha256": "f688e83ba262178ab0e54a4dd0d370caa564a1146175c43ff0f1f74fb794cce2"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2019_28-03-2019",
+      "path": "documents/114.pdf",
+      "sha256": "166887b990b5e1705a13335c38bb6a016d531324d6c76ee5d395d0a3f9cf7472"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2019_23-05-2019",
+      "path": "documents/115.pdf",
+      "sha256": "799e7d62f56c9624830b504c3850db166b7eb3a8852fc48992f112eeb0bf034c"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2019_11-07-2019",
+      "path": "documents/116.pdf",
+      "sha256": "0ec4d5882e2ea588b12e3490284e93a60876538e38dd9a28145dcff556a025b6"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2019_22-08-2019",
+      "path": "documents/117.pdf",
+      "sha256": "9a79128dbacdcb16dab2f00fd1be52e4752f0209f32ef23082a65aa2e4da0c7d"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2019_26-09-2019",
+      "path": "documents/118.pdf",
+      "sha256": "0eaecbd59afa80c2c8f84a008930e556e097a04ccf1f335f266174ec3d055037"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2019_14-11-2019",
+      "path": "documents/119.pdf",
+      "sha256": "cc54aaad01444b37d63ac41eeb9d2bdd31269b961f421f7fc908b6792c8e0a97"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2020_16-01-2020",
+      "path": "documents/120.pdf",
+      "sha256": "08f86994313de5e8727808c18e2c9b3ab7cfb95cf08ea8f0e947109bdd1291f0"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2020_20-02-2020",
+      "path": "documents/121.pdf",
+      "sha256": "497d513e5268c7120086bee244a1e4b7237c22ab85f76282471ecfcfe9eec612"
+    },
+    {
+      "doc_id": "cbe_original_2020-03-16",
+      "path": "documents/122.pdf",
+      "sha256": "13885b32972b76c00a625eb95dfe87258f7bdf1f86230c868d45252e84fc4644"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2020_02-04-2020",
+      "path": "documents/123.pdf",
+      "sha256": "5a1bffc9991ad924914f718b63f44df2338857aed19d351426448876d58279ee"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2020_14-05-2020",
+      "path": "documents/124.pdf",
+      "sha256": "37b02bf81afca5b7582e5038c6c06040d27932a3d2ac9173b3b7f7474a3f0891"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2020_25-06-2020",
+      "path": "documents/125.pdf",
+      "sha256": "a5c851611f7e7fabdb0333b631ac9fa2a6db3852463629b5b916d12105765e67"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2020_13-08-2020",
+      "path": "documents/126.pdf",
+      "sha256": "7ab85f5a39b49834f0533bb7982720a835b04fc01f73a8b0c4e2e061f9a0b5e5"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2020_24-09-2020",
+      "path": "documents/127.pdf",
+      "sha256": "73912cc2e7974d1ee67c4d64da0246810f8fbc457e0038507d4ceee676be5297"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2020_12-11-2020",
+      "path": "documents/128.pdf",
+      "sha256": "6ab9bec8abf8c493222ec667b50ff2ebf7f8a3995784eb60e3526c69924494b1"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2020_24-12-2020",
+      "path": "documents/129.pdf",
+      "sha256": "bd4bb8bf0d92421872aed25a15c52f9f767ae8bd6b1532ff395dd93d5ef54681"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2021_04-02-2021",
+      "path": "documents/130.pdf",
+      "sha256": "91af15c114ca3ed9081d9693417582aa740e307183d0c48c3ae1659a2b4d9c8b"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2021_18-03-2021",
+      "path": "documents/131.pdf",
+      "sha256": "285c9ba71dd958938720f8e7638db33ac06d063575dd11eea5596e2e6a9cf82b"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2021_28-04-2021",
+      "path": "documents/132.pdf",
+      "sha256": "bd1644144d532fc2fe82ba8492bb4a0eae0f77648f79ed67d7118ce2190863af"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2021_17-06-2021",
+      "path": "documents/133.pdf",
+      "sha256": "3e1bd0b1c76ee621bde35e22852333dc7c5b53e3ad69ba99594ade973bae8855"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2021_05-08-2021",
+      "path": "documents/134.pdf",
+      "sha256": "c8f68ddd58997909959c4edc11c2290bfda755952b0b2725343400cd27f581a0"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2021_16-09-2021",
+      "path": "documents/135.pdf",
+      "sha256": "e7663e6cfc8694dd2ef3102e7cd39daf08e8ff216446d63993f39f8bd46d5e64"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2021_28-10-2021",
+      "path": "documents/136.pdf",
+      "sha256": "06170090ae725a9c782d2dc83c2730f824b37cbb0cabd81bd8af19f3326300e9"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2021_16-12-2021",
+      "path": "documents/137.pdf",
+      "sha256": "0655c8c098bab67f5c6bb4ea26a349cf3f2276d36deba75ee13c68b87e8e4855"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2022_03-02-2022",
+      "path": "documents/138.pdf",
+      "sha256": "f65a5268869a56ebb3b7eee3b25807d4e2d75a0103ed33634e097a8c4d3e03c2"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2022_21-03-2022",
+      "path": "documents/139.pdf",
+      "sha256": "0e4e526308f43df5c132152bdd59cc5346176b412e3ffc5f091b8d7e18a2c95d"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2022_19-05-2022",
+      "path": "documents/140.pdf",
+      "sha256": "c71060dc38daba9083e86e821f567eee6094ba628a1cde00e5d40e176d708c6d"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2022_23-06-2022",
+      "path": "documents/141.pdf",
+      "sha256": "7e6017e31ae1f6503c748d2fc118f2511b4dc8dbdb5d585e29c88bad4f017a97"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2022_18-08-2022",
+      "path": "documents/142.pdf",
+      "sha256": "0b3abebd5597d32c43910a6ed85a54b8bafda6c62dd06abf35a97e74d03bade3"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2022_22-09-2022",
+      "path": "documents/143.pdf",
+      "sha256": "9078690a9686961223cff2512a9fdb380f7400b1f0ab56ad4cce14cf66795323"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2022_27-10-2022",
+      "path": "documents/144.pdf",
+      "sha256": "313f4590e06c815c7deecee267801ce284298b6824b9daf6416d4e0097f56cb3"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2022_22-12-2022",
+      "path": "documents/145.pdf",
+      "sha256": "1c7f37f7dec7ace9bb90f889765cd9526f2b8ca3c6acc95498d3afcd69c28f78"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2023_02-02-2023",
+      "path": "documents/146.pdf",
+      "sha256": "0e8c266284b7a9c33dc8cd073cc6463b1ef5a08b2bc0a9b483f2ba1c3dd50c2c"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2023_30-03-2023",
+      "path": "documents/147.pdf",
+      "sha256": "4f84131a8cb7d54865ccc9bbe7007e9d681542835173c9add79587b82b56a418"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2023_18-05-2023",
+      "path": "documents/148.pdf",
+      "sha256": "48852b7bbec2b01a2e4b4c2d661137066a12851793e12712b3f3a5c05836dd2b"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2023_22-06-2023",
+      "path": "documents/149.pdf",
+      "sha256": "c9b38908ac582a5f0ffee67b002499683a006327993e0c204827737bf2bf1d89"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2023_03-08-2023",
+      "path": "documents/150.pdf",
+      "sha256": "deee80f5eaaf92e9a48701125204d06f152a33013dec81fe4a9f2eb82369f415"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2023_21-09-2023",
+      "path": "documents/151.pdf",
+      "sha256": "51f74bf464c296a19bb5bb3d4c1de2b0d5dc306af62d8d078084c7ba3766352f"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2023_02-11-2023",
+      "path": "documents/152.pdf",
+      "sha256": "66d435f4381fba4e37d66f03f45e82612258e92e0d045ce5b5d2a7d22c49f57c"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2023_21-12-2023",
+      "path": "documents/153.pdf",
+      "sha256": "2ce8cef28a53e59a7beae7d5b28656685cdce5e3668e43e46ea1696304eab6d2"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2024_01-02-2024",
+      "path": "documents/154.pdf",
+      "sha256": "dece5ae2d6a40950fbfd89051b68aabda4226bac414c14f690527b660a6c9583"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2024_06-03-2024",
+      "path": "documents/155.pdf",
+      "sha256": "96991930e11b3fe17f8e374736f0f121cb0a5dd858b1b4de1fe53a6e32c79f19"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2024_23-05-2024",
+      "path": "documents/156.pdf",
+      "sha256": "5fca33249a034a98c8ae9f45f2730376c8ad87c0df28eb3b620df20e51e4965d"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2024_18-07-2024",
+      "path": "documents/157.pdf",
+      "sha256": "7fdb78635eae0c893d4d576c25ba94ef7085f5ba7016ef0b388bb62c82b27e1e"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2024_05-09-2024",
+      "path": "documents/158.pdf",
+      "sha256": "04999349de1d283e9d3f5ad12dd9fd2fa13731fccb354c2f30d89f02a2b7b7b0"
+    },
+    {
+      "doc_id": "central_bank_of_egypt_2024_17-10-2024",
+      "path": "documents/159.pdf",
+      "sha256": "1a992bdccd2aa3638afceac76baab09e1cb24d7c2e52b3eca294ca6c2ab93f31"
+    },
+    {
+      "doc_id": "cbe_indexed_2024-11-21",
+      "path": "documents/160.pdf",
+      "sha256": "50e8baab20dbedf2a897cea18a71ab911ea3079e176dfa3b43d9efc3097928f1"
+    },
+    {
+      "doc_id": "cbe_indexed_2024-12-26",
+      "path": "documents/161.pdf",
+      "sha256": "b92430b7ec60218993503f91fffa797804e82a1407629ea9db761751515beea2"
+    },
+    {
+      "doc_id": "cbe_indexed_2025-02-20",
+      "path": "documents/162.pdf",
+      "sha256": "02e8a60dfff60e82d64fb19765b4a23d78d439827aa8350d65b0eb32fe3b3e5d"
+    },
+    {
+      "doc_id": "cbe_indexed_2025-04-17",
+      "path": "documents/163.pdf",
+      "sha256": "1f7c6977dfb427eaa14edd73c40991a298be858a8f2b91fac42dfabd351f33f1"
+    },
+    {
+      "doc_id": "cbe_indexed_2025-05-22",
+      "path": "documents/164.pdf",
+      "sha256": "7e87ead05914c883ad0462ad14453abfac944f0a92d3b810162842bf5b70e309"
+    },
+    {
+      "doc_id": "cbe_indexed_2025-07-10",
+      "path": "documents/165.pdf",
+      "sha256": "d398cc3dedce5ee1bdae2f5fffb11f636adeef2c5d7e687b7da5674535a1be9b"
+    },
+    {
+      "doc_id": "cbe_indexed_2025-08-28",
+      "path": "documents/166.pdf",
+      "sha256": "9967e3b6dadb5d3dbf404f7b7f6457f344c9d98b8ed0012279b4d9e8592bfd4f"
+    },
+    {
+      "doc_id": "cbe_indexed_2025-10-02",
+      "path": "documents/167.pdf",
+      "sha256": "b5491c163a8d572cd500bf21d3d3e811646d79a3935d549e0de7001d01416a32"
+    },
+    {
+      "doc_id": "cbe_indexed_2025-11-20",
+      "path": "documents/168.pdf",
+      "sha256": "f2163ba8d6d168b0c6ebf1e85b75a2e13ff1f320bc9a5a2daa3e0ac4f673ad20"
+    },
+    {
+      "doc_id": "cbe_indexed_2025-12-25",
+      "path": "documents/169.pdf",
+      "sha256": "496429e90faccbc2e84e1e1cfd356a7390ee59f691f9905537ac2992e6ee3a6e"
+    },
+    {
+      "doc_id": "cbe_indexed_2026-02-12",
+      "path": "documents/170.pdf",
+      "sha256": "4dcf7e5335a00e08e501acf4117787b720c090a46f33c9b4566c29472d14e5f4"
+    },
+    {
+      "doc_id": "cbe_indexed_2026-04-02",
+      "path": "documents/171.pdf",
+      "sha256": "a88a35b20688675725e1c385a63c0e75e1de81a22b9a7a6217559d8450d11969"
+    },
+    {
+      "doc_id": "cbe_indexed_2026-05-21",
+      "path": "documents/172.pdf",
+      "sha256": "3e489d5f009b2fc0635e9dc99a91f87b15a7498cb59f7d6fb0aa318ca89c1c6c"
+    },
+    {
+      "doc_id": "cbe_indexed_2026-07-09",
+      "path": "documents/173.pdf",
+      "sha256": "4198f1718d41dfe3a4127d4e3d472e5a45ffbd4462cc4f65d34b693a9829f9da"
+    },
+    {
+      "doc_id": "cbe_indexed_2026-08-20",
+      "path": "documents/174.pdf",
+      "sha256": "0aa837c27ca5068d20a1b2414897e6fde1f1e29721eece9b0c34e1c3268263fc"
+    },
+    {
+      "doc_id": "cbe_indexed_2026-09-24",
+      "path": "documents/175.pdf",
+      "sha256": "baf74acf6d51f55565a296346a8d51674ac495fa408c35c742e4ac3023fb3ca1"
+    }
+  ],
+  "dashboard_transforms": [
+    "Inclusive calendar-year filters: documents/outcomes/forecasts by recorded meeting date; daily prices by session date.",
+    "Action and analysis-status filters restrict announcements/outcomes/forecasts, not the daily market context.",
+    "Eligible-close charts; no missing-value filling; sector-definition changes and gaps over seven days break lines.",
+    "Indexed mode = 100 * close / close on first common eligible date across available selected instruments in each pre/post-2020 segment; the benchmark also restarts.",
+    "Deposit levels from v2 review sidecar for matched events, otherwise retained inventory. Before levels are arithmetic implications; 2009-11-05 is conditional continuity.",
+    "Selected MAE and RMSE recomputed from saved predictions. Original intervals used only for exact original samples; no subset bootstrap.",
+    "Event-level joins by doc_id and sector; 2005-10-05 display correction preserves frozen inputs."
+  ],
+  "dashboard_scope": "Descriptive local research review, no empirical refits or new predictions.",
+  "artifact_revision": "research-workstation-2026-11-04",
+  "descriptive_sources": [
+    {
+      "source": "10_submissions/2026-11-04_doctor_revision/Chapter4/reviewed_data.json",
+      "sha256": "ea12a8dd04a7d69e28d7eef3811cc043106feca4c9c890616fcbad52d967e665"
+    },
+    {
+      "source": "10_submissions/2026-11-04_doctor_revision/Chapter4/chapter4_analysis.py",
+      "sha256": "ba75aff269c25985f43e0d0f0278d9b6e3b280c7a0e330e2c862bfd31a9e6bde"
+    },
+    {
+      "source": "10_submissions/2026-11-04_doctor_revision/Chapter4/tables/table_4_1.csv",
+      "sha256": "0c49ad3d6f6317e9c53cd96faca1aaa3a5ade2f35ab98bbcbbd6bc1da0a019ec"
+    },
+    {
+      "source": "10_submissions/2026-11-04_doctor_revision/Chapter4/tables/table_4_2.csv",
+      "sha256": "eabfd14a061b28a55559cec0836bcf2bae82b69f23328a8d238af0881f8e8640"
+    },
+    {
+      "source": "10_submissions/2026-11-04_doctor_revision/Chapter4/tables/table_4_3.csv",
+      "sha256": "2cf8e5088226695dc86cd0977842e77e0424aaa5bfd5856461ecc4eb25715b37"
+    },
+    {
+      "source": "10_submissions/2026-11-04_doctor_revision/Chapter4/tables/table_4_4.csv",
+      "sha256": "8e478ebda21f3ee4bb85bafa6122817728a39dadbb1fe3335802fa2d4049837d"
+    },
+    {
+      "source": "10_submissions/2026-11-04_doctor_revision/Chapter4/tables/table_4_5.csv",
+      "sha256": "8068643ce64c3927506f47957d2d881107b7df9c2f38c4628a1f5037a6903622"
+    },
+    {
+      "source": "10_submissions/2026-11-04_doctor_revision/Chapter4/tables/table_4_6.csv",
+      "sha256": "6a637cd7909646ecb83e89a24618f2fe32016cb49c13d36ef2f6a44051a3ba6c"
+    },
+    {
+      "source": "10_submissions/2026-11-04_doctor_revision/Chapter4/tables/table_4_7.csv",
+      "sha256": "9d10ffe831ab5d759c0649041f1b923cda2d61344e67a56e11493e343902bc39"
+    }
+  ],
+  "ui_dependencies": "vendor/dependencies.json",
+  "workstation_transforms": [
+    "Explicit inclusive date bounds; meeting date for announcement-linked evidence and observation date for daily context.",
+    "Descriptive selected-period summaries from source rows: sample SD n-1, linear quartiles, valid return endpoints, 1.5-IQR observed whiskers and retained outliers.",
+    "Common pre/post-2020 price rebasing; missing values, definition changes and long gaps break lines.",
+    "Selected forecast scores computed from saved predictions only; original intervals limited to their exact original evaluation dates.",
+    "Chart viewport is separate from the research selection; window-aware chart rows/metadata and labelled SVG/PNG exports.",
+    "Native current-file manifest, browser-local/view-file settings, navy/light presentation and locally embedded reviewed fonts."
+  ],
+  "implementation_sources": [
+    "core.js",
+    "charts.js",
+    "ui.js",
+    "readers.js",
+    "views.js",
+    "app.js",
+    "style.css",
+    "index.html"
+  ],
+  "hosting_release": {
+    "date": "2026-11-05",
+    "platform": "GitHub Pages",
+    "audience": "public",
+    "authorization": "Owner explicitly confirmed permission for all included data and files; not independent license certification.",
+    "study_snapshot": "unchanged accepted outputs; no model fits or new intervals"
+  }
+}

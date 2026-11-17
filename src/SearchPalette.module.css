@@ -1,0 +1,105 @@
+.heading { padding-block: 10px; }
+.content { padding: 16px 20px 12px; }
+.input { display: flex; position: relative; align-items: center; }
+.input > :global(.icon) {
+  position: absolute;
+  inset-inline-start: 13px;
+  color: var(--primary);
+  pointer-events: none;
+}
+.input input {
+  width: 100%;
+  min-height: 48px;
+  padding-inline: 39px 12px;
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+.scope {
+  margin: 9px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+.results {
+  max-height: min(48dvh, 400px);
+  margin: 0;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--surface);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  list-style: none;
+}
+.result {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  min-height: 55px;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.result:hover { background: var(--raised); }
+.result[aria-selected="true"] {
+  background: var(--selection);
+  border-color: color-mix(in srgb, var(--primary) 25%, transparent);
+}
+.glyph {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  background: var(--raised);
+  color: var(--accent-ink-strong);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.glyph > :global(.icon) { width: 16px; height: 16px; }
+.words {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.words strong { color: var(--text); font-size: 14px; }
+.words small {
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.kind {
+  padding: 2px 6px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--raised);
+  color: var(--muted);
+  font-size: 11px;
+}
+.empty { padding-block: 11px; margin: 0; }
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 9px;
+  margin-top: 7px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+.keys kbd {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 1px 4px;
+  border-radius: 4px;
+  font: inherit;
+}
+@media (max-width: 550px) {
+  .content { padding: 12px; }
+  .result { gap: 7px; }
+  .input input { font-size: 16px; }
+  .keys { display: none; }
+}
